@@ -13,7 +13,7 @@ VERSION = 'v1'
 
 
 class Main(Resource):
-    def get(self):
+    def post(self):
         json_data = request.get_json(force=True)
         url = json_data['url']
 
@@ -27,7 +27,7 @@ class Main(Resource):
         driver.get(url)
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         driver.close()
-        
+
         return { 'soup': str(soup) }
 
 
