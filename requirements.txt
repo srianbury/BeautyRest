@@ -1,4 +1,5 @@
 aniso8601==8.0.0
+beautifulsoup4==4.8.2
 Click==7.0
 Flask==1.1.1
 Flask-RESTful==0.3.8
@@ -7,5 +8,8 @@ itsdangerous==1.1.0
 Jinja2==2.11.1
 MarkupSafe==1.1.1
 pytz==2019.3
+selenium==3.141.0
 six==1.14.0
+soupsieve==1.9.5
+urllib3==1.25.8
 Werkzeug==1.0.0
