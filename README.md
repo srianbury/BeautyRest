@@ -1,4 +1,4 @@
-# BeautyRest
+# BeautyRest  [![Build Status](https://travis-ci.org/srianbury/BeautyRest.svg?branch=master)](https://travis-ci.org/srianbury/BeautyRest)
 The BeautifulSoup REST-ful API
 
 ### Quick Start (node example)
