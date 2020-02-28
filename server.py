@@ -5,7 +5,6 @@ import os
 from dotenv import load_dotenv
 from resources.Main.resource import Main
 
-
 # setup / vars
 load_dotenv()
 app = Flask(__name__)
