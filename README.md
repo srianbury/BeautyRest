@@ -17,3 +17,4 @@ deployment.  With this project you can add web scrapping to your application wit
 
 ### New Features
 Open to adding new features and adapting for additional requirements, just open an issue.
+ - Adding support for multiple URLs via POST
