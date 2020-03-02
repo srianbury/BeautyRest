@@ -2,6 +2,7 @@
 The BeautifulSoup REST-ful API
 
 ### Quick Start (node example)
+Just pass your url as the `url` param for the API:
 ```
 fetch(`https://beautyrest.herokuapp.com/v1/soup?url=https://www.google.com`);
 ```
