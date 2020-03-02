@@ -3,11 +3,7 @@ The BeautifulSoup REST-ful API
 
 ### Quick Start (node example)
 ```
-fetch('https://beautyrest.herokuapp.com/v1/soup', {
-  method: 'POST',
-  body: JSON.stringify({ url: 'https://www.google.com' }),
-  headers: { 'Content-Type': 'application/json' },
-});
+fetch(`https://beautyrest.herokuapp.com/v1/soup?url=https://www.google.com`);
 ```
 
 ### Example
