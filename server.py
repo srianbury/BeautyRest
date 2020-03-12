@@ -21,4 +21,3 @@ api.add_resource(Main, '/{VERSION}{VERSION_NUMBER}/soup'.format(VERSION=VERSION,
 
 if __name__ == '__main__':
     app.run(debug=True)
-
