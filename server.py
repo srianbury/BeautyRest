@@ -1,9 +1,10 @@
 from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
-import os
 from dotenv import load_dotenv
 from resources.Main.resource import Main
+from common.get_version import get_version
+from common.get_route import get_route
 
 
 # setup / vars
@@ -11,12 +12,10 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 api = Api(app)
-VERSION = os.getenv('VERSION')
-VERSION_NUMBER = os.getenv('VERSION_NUMBER')
 
 
 # add resources
-api.add_resource(Main, '/{VERSION}{VERSION_NUMBER}/soup'.format(VERSION=VERSION, VERSION_NUMBER=VERSION_NUMBER))
+api.add_resource(Main, get_route(['soup']))
 
 
 if __name__ == '__main__':
