@@ -3,7 +3,6 @@ from flask_restful import Api
 from flask_cors import CORS
 from dotenv import load_dotenv
 from resources.Main.resource import Main
-from common.get_version import get_version
 from common.get_route import get_route
 
 
@@ -15,7 +14,7 @@ api = Api(app)
 
 
 # add resources
-api.add_resource(Main, get_route(['soup']))
+api.add_resource(Main, Main().route)
 
 
 if __name__ == '__main__':
