@@ -1,11 +1,17 @@
 from flask import request
-from flask_restful import Resource
+from flask_restful import Resource, reqparse
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import os
+from common import constants
+from common.get_route import get_route
 
 
 class Main(Resource):
+    def __init__(self):
+        self.route = get_route(['soup'])
+
+
     def post(self):
         json_data = request.get_json(force=True)
         url = json_data['url']
@@ -15,9 +21,12 @@ class Main(Resource):
     
 
     def get(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('url', required=True, help=constants.ERROR_PARAM_URL)
+        args = parser.parse_args()
+
         url = self._get_url(request.args)
         soup = self._get_soup(url)
-        
         return self._return_json_soup(soup)
     
 
